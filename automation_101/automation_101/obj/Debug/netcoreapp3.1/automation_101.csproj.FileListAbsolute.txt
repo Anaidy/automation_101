@@ -1,0 +1,16 @@
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.exe
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.csprojAssemblyReference.cache
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.AssemblyInfoInputs.cache
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.AssemblyInfo.cs
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.deps.json
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.runtimeconfig.json
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.runtimeconfig.dev.json
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.dll
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\automation_101.pdb
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.csproj.CoreCompileInputs.cache
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.csproj.CopyComplete
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.dll
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.pdb
+C:\Users\CarlosR\Documents\GitHub\automation_101\automation_101\automation_101\obj\Debug\netcoreapp3.1\automation_101.genruntimeconfig.cache

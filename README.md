@@ -5,6 +5,7 @@ Download Visual Studio 2019 Commnity edition
 Using NuGet package manager, install:
 - Selenium.Chrome.WebDriver
 - Selenium.Support
+- Selenium.WebDriver
 
 Configure Chromedriver to be available anywhere in your PC:
 - Open C:\
