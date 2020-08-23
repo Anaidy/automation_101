@@ -22,6 +22,16 @@ namespace automation_101
              * 9. Close the browser
              * ***/
 
+            /***
+             * Lesson 002 - Searching Elements inside another Elements
+             * 
+             * In this Lesson we tweak step 8
+             * 8.1. We find a container element that has different pokemon information
+             * 8.2. We use the resultant element from Step 8.1, and search for another element in that element 
+             * 8.3. We search for the element we actually want in the element from Step 8.2
+             * 
+             * ***/
+
 
             IWebDriver WebDriver = new ChromeDriver();  // We open a Chrome Web Browser
 
@@ -47,8 +57,10 @@ namespace automation_101
             IWebElement PokemonNameHeader = WebDriver.FindElement(By.CssSelector("main>h1"));
             Console.WriteLine(PokemonNameHeader.Text);  //The element name is printed in console 
 
-            string NationalDexSelector = "div[class='tabs-panel active'][id^='tab-basic-'] div:nth-child(1)>div[class$='text-center']+div:nth-child(2)>h2+table.vitals-table tbody>tr:nth-child(1) >td";
-            IWebElement PokemonNationalDexNumber = WebDriver.FindElement(By.CssSelector(NationalDexSelector));
+            //Step 8 tweak
+            IWebElement PokemonInfoContainer = WebDriver.FindElement(By.CssSelector("div[class='tabs-panel active'][id^='tab-basic-']"));
+            IWebElement PokemonInfoContainer_BasicInfo = PokemonInfoContainer.FindElement(By.CssSelector("div:nth-child(1)>div[class$='text-center']+div:nth-child(2)>h2+table.vitals-table"));
+            IWebElement PokemonNationalDexNumber = PokemonInfoContainer_BasicInfo.FindElement(By.CssSelector("tbody>tr:nth-child(1) >td"));
             Console.WriteLine(PokemonNationalDexNumber.Text);  //The element name is printed in console 
 
             Thread.Sleep(3000);
