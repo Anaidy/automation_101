@@ -19,16 +19,15 @@ namespace automation_101
              * 6. Scroll to that Pokemon element and click it
              * 7. Find and Print the Pokemon name in the new page header
              * 8. Find and Print the Pokemon # in the new page content
-             * 9. Close the browser
+             * 9. Find the Pokemon HP Base Stat
+             * 10. Close the browser
              * ***/
 
             /***
-             * Lesson 002 - Searching Elements inside another Elements
+             * Lesson 003 - Searching Elements inside another Elements Part 2
              * 
-             * In this Lesson we tweak step 8
-             * 8.1. We find a container element that has different pokemon information
-             * 8.2. We use the resultant element from Step 8.1, and search for another element in that element 
-             * 8.3. We search for the element we actually want in the element from Step 8.2
+             * In this Lesson we tweak step 8 again
+             * 9. Using the PokemonInfoContainer from Step 8, we'll find first the Stats container
              * 
              * ***/
 
@@ -62,6 +61,11 @@ namespace automation_101
             IWebElement PokemonInfoContainer_BasicInfo = PokemonInfoContainer.FindElement(By.CssSelector("div:nth-child(1)>div[class$='text-center']+div:nth-child(2)>h2+table.vitals-table"));
             IWebElement PokemonNationalDexNumber = PokemonInfoContainer_BasicInfo.FindElement(By.CssSelector("tbody>tr:nth-child(1) >td"));
             Console.WriteLine(PokemonNationalDexNumber.Text);  //The element name is printed in console 
+
+            // Step 9
+            IWebElement PokemonInfoContainer_StatsContainer = PokemonInfoContainer.FindElement(By.CssSelector("div:nth-child(2)>div:nth-child(1)"));
+            IWebElement PokemonInfoContainer_StatsContainer_BaseStatHP = PokemonInfoContainer_StatsContainer.FindElement(By.CssSelector("table.vitals-table tbody>tr:nth-child(1) td:nth-of-type(1)"));
+            Console.WriteLine(PokemonInfoContainer_StatsContainer_BaseStatHP.Text);  //The element name is printed in console 
 
             Thread.Sleep(3000);
             WebDriver.Quit(); // We end the execution
