@@ -73,7 +73,7 @@ namespace automation_101
 
             //Step 10
             WDObject.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            IWebElement TacosElement = WDObject.FindElement(By.CssSelector("tacomon"));  //This is searching the element using the wait
+            IWebElement TacosElement = WDObject.FindElement(By.CssSelector("tacomon"));  
 
             //Step 11
             Thread.Sleep(3000);
