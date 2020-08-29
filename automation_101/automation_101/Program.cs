@@ -26,13 +26,15 @@ namespace automation_101
              * ***/
 
             /***
-             * Lesson 004 - Implicit Wait
+             * Lesson 005 - Implicit Wait vs Page timeout
              * 
-             * In this example we look for the element "tacos", which doesnt exist
-             * But since the ImplitWait is set to 10 seconds, the code will fail after 10 seconds
+             * In Step 10:
+             * In this example, we have a TimeOut of 5, and Implicit Wait of 10
+             * This code with fail after 5 seconds; the reason is that this page
+             * DOES load, but the element doesnt.
+             * If the page didnt finish loading after 5 seconds, then it would have fail.
              * 
-             * Once Implicit Wait is Set, It will continue Set for ALL the session
-             * Implici Wait Default Value = 0 seconds
+             * 
              * ***/
 
 
@@ -72,6 +74,7 @@ namespace automation_101
             Console.WriteLine(PokemonInfoContainer_StatsContainer_BaseStatHP.Text);  //The element name is printed in console 
 
             //Step 10
+            WDObject.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
             WDObject.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             IWebElement TacosElement = WDObject.FindElement(By.CssSelector("tacomon"));  
 
