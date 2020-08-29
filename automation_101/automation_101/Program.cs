@@ -26,19 +26,17 @@ namespace automation_101
              * ***/
 
             /***
-             * Lesson 005 - Implicit Wait vs Page timeout
+             * Lesson 006 - Set implicit wait and timeout at the very beginning
              * 
-             * In Step 10:
-             * In this example, we have a TimeOut of 5, and Implicit Wait of 10
-             * This code with fail after 5 seconds; the reason is that this page
-             * DOES load, but the element doesnt.
-             * If the page didnt finish loading after 5 seconds, then it would have fail.
+             * We move such settings to Step 1, right after we create the Driver
              * 
              * 
              * ***/
 
 
             IWebDriver WDObject = new ChromeDriver();  // We open a Chrome Web Browser
+            WDObject.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            WDObject.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             string url = "https://pokemondb.net/";
             WDObject.Manage().Window.Maximize();
@@ -74,8 +72,6 @@ namespace automation_101
             Console.WriteLine(PokemonInfoContainer_StatsContainer_BaseStatHP.Text);  //The element name is printed in console 
 
             //Step 10
-            WDObject.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
-            WDObject.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             IWebElement TacosElement = WDObject.FindElement(By.CssSelector("tacomon"));  
 
             //Step 11
